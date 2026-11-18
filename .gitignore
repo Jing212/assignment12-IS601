@@ -1,0 +1,31 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Testing and coverage
+.coverage
+.coverage.*
+.pytest_cache/
+htmlcov/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# macOS system files
+.DS_Store
+
+# IDE configuration
+.vscode/
+.idea/
+
+# Log files
+*.log
