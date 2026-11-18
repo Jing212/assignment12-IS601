@@ -13,7 +13,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip and essential Python tools
-RUN python -m pip install --upgrade pip setuptools>=70.0.0 wheel
+RUN python -m pip install --no-cache-dir --upgrade pip "setuptools>=78.1.1" wheel
 
 # Create non-root user
 RUN groupadd -r appgroup && \
@@ -21,7 +21,8 @@ RUN groupadd -r appgroup && \
 
 # Copy dependencies and install them
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt && \
+    find /usr/local/lib -path "*/site-packages/pip/*" -name "bom.cdx.json" -delete
 
 # Copy application code
 COPY . .
