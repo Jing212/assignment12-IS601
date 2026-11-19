@@ -91,6 +91,22 @@ git clone https://github.com/Jing212/assignment12-IS601.git
 cd assignment12-is601
 ```
 
+
+## Docker Hub Repository
+
+The Docker Hub repository for this project is:
+
+[Assignment 12 - Docker Hub](https://hub.docker.com/repository/docker/jing212/assignment12_is601/general)
+
+### Pull the Docker Image
+
+To download the Docker image locally, run the following command
+if the latest tag is available:
+
+```bash
+docker pull jing212/assignment12_is601:latest
+```
+
 ### 2. Create a Virtual Environment
 
 ```bash
